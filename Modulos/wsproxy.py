@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# VPSMANAGER By @Crazy_vpn
+# VPSMANAGER By @VPS_MANAGER
 import socket, threading, thread, select, signal, sys, time, getopt
 
 PASS = ''
