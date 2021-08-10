@@ -1,6 +1,6 @@
 {
     "update":[{
-            "updateurl":"https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER-1.0/master/config.json",
+            "updateurl":"https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER-1.0/main/config.json",
             "version":"1.0.2"
              }],
     "servers":[
