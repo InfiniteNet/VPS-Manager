@@ -7,7 +7,7 @@ https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER-1.0/main/Install/versa
 
 https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER-1.0/main/Modulos/$_arq
 
-https://raw.githubusercontent.com/shellscriptx/shellbot/master/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
+https://raw.githubusercontent.com/shellscriptx/shellbot/master/ShellBot.sh >/etc/VPSManager/ShellBot.sh
 
 https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
 
