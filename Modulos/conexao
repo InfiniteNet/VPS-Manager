@@ -1477,6 +1477,7 @@ exit 0' >$RCLOCAL
 			if ps x | grep -w proxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
 				clear
 				msgsocks=$(cat /etc/VPSManager/proxy.py | grep -E "MSG =" | awk -F = '{print $2}' | cut -d "'" -f 2)
+				msgsocks=$(cat /etc/VPSManager/wsproxy.py | grep -E "MSG =" | awk -F = '{print $2}' | cut -d "'" -f 2)
 				echo -e "\E[44;1;37m             PROXY SOCKS              \E[0m"
 				echo ""
 				echo -e "\033[1;33mSTATUS: \033[1;32m$msgsocks"
@@ -1528,9 +1529,13 @@ exit 0' >$RCLOCAL
 				fun_msgsocks() {
 					msgsocks2=$(cat /etc/VPSManager/proxy.py | grep "MSG =" | awk -F = '{print $2}')
 					sed -i "s/$msgsocks2/ '$msgg'/g" /etc/VPSManager/proxy.py
+					msgsocks2=$(cat /etc/VPSManager/wsproxy.py | grep "MSG =" | awk -F = '{print $2}')
+					sed -i "s/$msgsocks2/ '$msgg'/g" /etc/VPSManager/wsproxy.py
 					sleep 1
 					cor_old=$(grep 'color=' /etc/VPSManager/proxy.py | cut -d '"' -f2)
 					sed -i "s/\b$cor_old\b/$cor_sts/g" /etc/VPSManager/proxy.py
+					cor_old=$(grep 'color=' /etc/VPSManager/wsproxy.py | cut -d '"' -f2)
+					sed -i "s/\b$cor_old\b/$cor_sts/g" /etc/VPSManager/wsproxy.py
 
 				}
 				echo ""
