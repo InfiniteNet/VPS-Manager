@@ -1567,10 +1567,24 @@ exit 0' >$RCLOCAL
 						rm /tmp/Pt_sks
 					fi
 				}
+				restartwssocks() {
+					if ps x | grep wsproxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
+						echo -e "$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >/tmp/Pt_sks
+						for pidproxy in $(screen -ls | grep ".proxy" | awk {'print $1'}); do
+							screen -r -S "$pidproxy" -X quit
+						done
+						screen -wipe >/dev/null
+						_Ptsks="$(cat /tmp/Pt_sks)"
+						sleep 1
+						screen -dmS proxy python /etc/VPSManager/wsproxy.py $_Ptsks
+						rm /tmp/Pt_sks
+					fi
+				}
 				echo ""
 				echo -e "\033[1;32mREINICIANDO PROXY SOCKS!"
 				echo ""
 				fun_bar 'restartsocks'
+				fun_bar 'restartwssocks'
 				echo ""
 				echo -e "\033[1;32mSTATUS ALTERADO COM SUCESSO!"
 				sleep 2
