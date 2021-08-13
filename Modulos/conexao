@@ -1590,6 +1590,7 @@ exit 0' >$RCLOCAL
                 echo -e "\033[1;32mREINICIANDO WEBSOCKET!"
 				echo ""
 				fun_bar 'restartwssocks'
+				sleep 5
 				echo ""
 				echo -e "\033[1;32mSTATUS ALTERADO COM SUCESSO!"
 				sleep 2
