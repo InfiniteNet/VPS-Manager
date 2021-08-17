@@ -1966,6 +1966,7 @@ exit 0' >$RCLOCAL
 				sts9="\033[1;31m○ "
 			}
 			[[ "$(ps x | grep 'fun_chisel' | grep -v 'grep'|wc -l)" != '0' ]] && {
+				echo -e "\033[1;32mSERVICO: \033[1;33mCHISEL: \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'docker' | awk {'print $4'} | cut -d: -f2 | xargs)"
 				sts8="\033[1;32m◉ "
 			} || {
 				sts8="\033[1;31m○ "
