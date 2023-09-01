@@ -7,7 +7,7 @@ __Recomendado__
 
 __Instalar apenas o SCRIPT__
 
-```wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER-1.0/main/Plus; chmod 777 Plus;./Plus```
+```wget https://raw.githubusercontent.com/InfiniteNet/VPS-Manager/main/Plus; chmod 777 Plus;./Plus```
 
 __Instalar o SCRIPT e atualizar pacotes do sistema__
 
